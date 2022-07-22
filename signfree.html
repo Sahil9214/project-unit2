@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<style>
+  *  {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+    #header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#content {
+    display: flex;
+    justify-content: center;
+    background-image: url(https://assets.loseit.com/website/onboarding/Wave.svg);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: 100% auto;
+    background-position: bottom center;
+    padding-bottom: 100px;
+    height: 100vh;
+}
+#features {
+    display: flex;
+    justify-content: center;
+   
+}
+#marketing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -100px;
+}
+#features * {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+#features img{
+    margin: 10px auto;
+    padding:0px 40px;
+   
+  
+ 
+}
+.class{
+    color: #f7941d;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+   margin-bottom: 20px;
+  
+    
+}
+img{
+    vertical-align: middle;
+    border-style: none;
+}
+#form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    background-color:#f5f5f5;
+    border-radius: 10px;
+   margin-left: 100px; 
+   margin-top: 100px;
+   
+ 
+}
+.heading {
+    color: #173962;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#Yes{
+    
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    background: #ff9400;
+    border-color: #ff9400;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20%;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+#No{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20%;
+    font-weight: 700;
+    background: #ff9400;
+    border-color: #ff9400;
+    width: 200px;
+    margin: 20px auto;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+   
+}
+
+</style>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="data:image/png;base64,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" alt="logo">
+
+        </div>
+    </div>
+
+<section id="content">
+    <div id="marketing">
+    <div class="class">
+        Take the first step towards <br>a healthier you with Lose It!.
+    </div>
+    <div id="features">
+        <div>
+            <img src="https://assets.loseit.com/website/onboarding/SetGoal.svg" width="120px" alt="flag">
+            <p>Set Your Goals</p>
+        </div>
+        <div>
+            <img src="https://assets.loseit.com/website/onboarding/TrackFoods.svg" width="120px" alt="food">
+            <p>Track Your Foods</p>
+        </div>
+        <div>
+            <img src="https://assets.loseit.com/website/onboarding/LoseWeight.svg" width="120px" alt="ribbon">
+            <p>Lose Weight</p>
+        </div>
+    </div>
+   
+</div>
+<div id="form">
+    <div class="heading">Have you counted calories before?</div>
+ 
+        <a id="Yes" href="weight.html">Yes</a>
+        <a id="No" href="weight.html">No</a>
+   
+  
+</div>
+</section>
+
+    
+</body>
+</html>

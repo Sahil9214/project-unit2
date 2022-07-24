@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>share Your story</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            align-self: center;
+        }
+
+        #nav #logo {
+            margin: 0 20px;
+            width: 200px;
+            background-color: transparent;
+            height: auto;
+        }
+
+        #nav #logIn {
+            font-size: 1em;
+            font-weight: 400;
+            color: white;
+
+            right: 0;
+            background-color: #ff9400;
+            margin: 20px;
+            float: right;
+            text-align: center;
+            padding: 10px 40px;
+            text-decoration: none;
+        }
+
+        #header {
+            background-image: url(https://assets.loseit.com/website/corporate/InteriorHeaderPattern.svg), linear-gradient(0.25turn, #FF8D00, #FF9400);
+            background-position: 100% 50%;
+            background-size: 100% 500px;
+            background-repeat: repeat;
+            height: 300px;
+            display: flex;
+        }
+
+        .body {
+            padding: 50px 50px;
+        }
+
+        #summary img {
+            width: 140px;
+            margin: 0px auto;
+            text-align: center;
+            display: block;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #header h1 {
+            color: #fff;
+            font-size: 70px;
+            font-weight: 600;
+            margin: 0px auto;
+            align-self: center;
+            text-align: center;
+        }
+
+        .class {
+            width: 40%;
+            text-align: center;
+            margin: auto;
+
+
+        }
+
+        p {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #183962;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        #weightLossJourney {
+            background-color: #f1f1f1;
+        }
+
+        #weightLossJourney .container {
+            flex-wrap: wrap;
+            margin: 0px auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formSubmission {
+            text-decoration: none;
+            color: #ff9400;
+            outline: 0;
+            border-radius: 0.25rem;
+            background-color: #fff;
+            padding: 15px 15px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 10px 10px;
+            border: 0;
+            display: inline-flex;
+            letter-spacing: 1px;
+            border-color: transparent;
+            width: 40%;
+            height: 80px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .memory {
+            height: 400px;
+          
+        }
+
+        #getStarted {
+            text-align: center;
+            padding: 50px 0 70px 0;
+            background-color: #f1f1f1;
+            background-image: url(https://assets.loseit.com/website/home/Pattern_50opacity_Long.svg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #getStarted h3 {
+            color: #FF8925;
+        }
+
+
+        a {
+            color: #FF8D00;
+            text-decoration: none;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #183962;
+            text-align: center;
+            font-weight: 500;
+            margin: 40px 0px 20px 0px;
+        }
+
+        #footer {
+            color: #fff;
+            padding: 40px 20px;
+            background-color: #183962;
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #always>tbody>tr>th {
+            padding: 25px;
+        }
+
+        tbody th {
+
+            font-size: 16px;
+            font-weight: 800;
+            /* padding: 20px; */
+            justify-content: start;
+        }
+
+        td a {
+            color: white;
+            font-weight: bolder;
+            border: none;
+        }
+
+        .social {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 14px;
+            margin: auto;
+        }
+
+        .social a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            margin: auto;
+        }
+
+        #footer p {
+            color: white;
+            font-weight: bolder;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            margin-bottom: 1rem;
+        }
+
+        #phone>img {
+            height: 500px;
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        tr>td {
+            font-size: 1.0rem;
+            padding: 20px;
+
+        }
+
+        tr>th {
+            font-size: 1.3rem;
+        }
+
+        #always>tbody>tr>th {
+            padding: 25px;
+        }
+
+        #footer {
+            color: #fff;
+            padding: 40px 20px;
+            background-color: #183962;
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+
+
+        #footer .link {
+            max-width: 1000px;
+            display: inline-block;
+            margin: 30px auto;
+            justify-content: flex-start;
+            width: 80%;
+
+        }
+
+        #footer table {
+            width: 60%;
+            margin: 0 0;
+            float: right;
+            text-align: left;
+        }
+
+        .memory img {
+            width: 150px;
+            height: 150px
+        }
+
+        /* .memory button{
+    position: absolute;
+    top: 40%;
+} */
+        .memory {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+
+
+        .memory1 {
+
+            width: 40%;
+            margin: auto;
+
+            background-color: #f1f1f1;
+            padding: 50px 50px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+        .memory2 {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-size: 200px 200px;
+            text-align: center;
+            animation: slider 18s infinite linear;
+            overflow: hidden;
+
+
+        }
+
+        @keyframes slider {
+            0% {
+                background-image: url("https://assets.loseit.com/website/story_submission/member_josh.png");
+            }
+
+            20% {
+                background-image: url("https://assets.loseit.com/website/story_submission/member_emily.png");
+            }
+
+            40% {
+                background-image: url("https://assets.loseit.com/website/HIW/advice-free_ashley.png");
+            }
+
+            60% {
+                background-image: url("https://assets.loseit.com/website/story_submission/member_josh.png");
+            }
+
+            80% {
+                background-image: url("https://assets.loseit.com/website/story_submission/member_justin.png");
+
+            }
+        }
+        .memory4{
+            overflow: hidden;
+           text-align: center;
+           
+        }
+
+        .memory3 {
+            animation: slider1 18s infinite linear;
+            overflow: hidden;
+            text-align: center;
+            color: rgb(63, 63, 189);
+            font-family: bolder;
+          
+           
+            box-sizing: border-box;
+        }
+
+        @keyframes slider1 {
+            0% {
+                margin-top: 50px;
+
+
+            }
+
+            20% {
+                margin-top: -50px;
+            }
+
+            40% {
+                margin-top: 0px;
+            }
+
+            60% {
+                margin-top: 50px;
+            }
+
+            80% {
+                margin-top: -50px;
+            }
+
+        }
+
+        .memory1 img {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="nav">
+        <a id="logo" href="index.html">
+            <img src="https://assets.loseit.com/website/corporate/LoseIt_Logo_FullColor+(1).svg" alt="Lose It! logo">
+        </a>
+        <a id="logIn" href="Login.html">Login</a>
+    </section>
+    <section id="header">
+        <h1>We want to hear your story</h1>
+    </section>
+
+    <section id="summary">
+        <div class="body">
+
+            <img width="140px" src="https://assets.loseit.com/website/story_submission/icon_storysubmission.png" alt="">
+            <div class="class">
+                <p>Your incredible accomplishments are what drives the Lose It! team to make the best weight loss
+                    program
+                    possible, and we’d love to share your story with other members in hopes of inspiring them, too.
+                    Whether
+                    you’re just beginning your weight loss journey or you’ve already reached your goals, we want to hear
+                    from you!</p>
+                <p>These stories are typically shared on our blog, across social media, in our newsletters, and with our
+                    PR
+                    team. Thanks for being a part of the Lose It! family and we can’t wait to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="weightLossJourney">
+        <div class="body">
+            <h2>Where are you in your weight loss journey?</h2>
+            <p>To share your story, simply click on the button below that best describes where you are in your weight
+                loss journey and fill out the corresponding form.</p>
+            <div class="container">
+                <a class="formSubmission" href="https://www.jotform.com/220347136783154"><img
+                        src="https://assets.loseit.com/website/story_submission/ribbon_beginningjourney.png"
+                        width="100px" height="100px" alt="">I'm just
+                    beginning my weight loss journey.</a>
+                <a class="formSubmission" href="https://www.jotform.com/220374892941159"><img
+                        src="https://assets.loseit.com/website/story_submission/ribbon_workingtoward.png" width="100px"
+                        height="100px" alt="">I'm working
+                    towards my weight loss goals.</a>
+                <a class="formSubmission" href="https://www.jotform.com/220376246354152"><img
+                        src="https://assets.loseit.com/website/story_submission/ribbon_reachedgoal.png" width="100px"
+                        height="100px" alt="">I've reached my
+                    weight loss goal.</a>
+                <a class="formSubmission" href="https://www.jotform.com/220376292448157"><img
+                        src="https://assets.loseit.com/website/story_submission/ribbon_maintainingweight.png"
+                        width="100px" height="100px" alt="">I'm
+                    maintaining my weight loss.</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- now its time for siliding window -->
+    <div class="memory">
+        <h2>Featured Member Stories</h2>
+        <p>Check out some of our recent stories from our amazing members!</p>
+        <div class="memory1">
+
+            <div class="memory2">
+
+            </div>
+            <div class="memory4">
+            <div class="memory3">
+                <div> Josh lost 52lbs,his dotor say he is best in his shape</div>
+                <div>Emmy partnere with his husband and meslt away 51lbs</div>
+                <div>Meet Justin father, Lose it member and healthy reipe creator</div>
+                <div> Lora dropped feeding his emotion and lost her 118lbs</div>
+                <div>calyton join loseit and lost her 45lbs</div>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+
+
+
+    <section id="getStarted">
+        <h3>Get Started on Mobile</h3>
+        <a href="/get/apple/">
+            <img src="https://assets.loseit.com/website/home/Download_Apple.svg" width="200px" height="200px"
+                alt="App Store">
+        </a>
+        <a href="/get/android/">
+            <img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" width="200px" height="200px"
+                alt="Google Play Store">
+        </a>
+    </section>
+
+
+
+
+
+
+
+    <div id="footer">
+        <div class="link">
+            <img src="https://assets.loseit.com/website/home/Footer_WhiteKnockOutLogo.svg" width="100px" height="100px"
+                alt="Lose It! logo">
+            <table id="always">
+                <tbody>
+                    <tr>
+                        <th>Member Resources</th>
+                        <th>Connect with Us</th>
+                        <th>Our Team</th>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <a href="/how-it-works/">How It Works</a>
+                        </td>
+                        <td>
+                            <a href="/press/">Press & Media Kit</a>
+                        </td>
+                        <td>
+                            <a href="/about/">About Us</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="/how-it-works/#premium">Premium</a>
+                        </td>
+                        <td>
+                            <a href="https://help.loseit.com/hc/en-us/requests/new">Contact Us</a>
+                        </td>
+                        <td>
+                            <a href="/jobs/">Careers</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://loseitblog.com">Lose It! Blog</a>
+                        </td>
+                        <td>
+                            <a href="/diversity/">Diversity</a>
+                        </td>
+                        <td>
+                            <a href="/partners/">Partners & amp API</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://help.loseit.com/hc/en-us">Help Center</a>
+                        </td>
+                        <td>
+                            <a href="/memberstories/">Share Your Story</a>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/loseit/" aria-label="Facebook page of Lose It!"><i
+                    class="fab fa-facebook-square"></i><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXuJOZzykgBcnzCUFo-Yc7lJZkLnRWAAPmbw&usqp=CAU"
+                    width="20px" height="20px" alt=""></a>
+            <a href="https://www.instagram.com/loseitapp/" aria-label="Instagram page of Lose It!"><i
+                    class="fab fa-instagram"></i>
+                <img src="https://cdn.iconscout.com/icon/free/png-64/instagram-52-151106.png" width="20px" height="20px"
+                    alt=""></a>
+            <a href="https://www.twitter.com/loseit/" aria-label="Twitter page of Lose It!"> <i
+                    class="fab fa-twitter"></i>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBEQACEQEDEQH/xAAbAAEBAQADAQEAAAAAAAAAAAABAAIEBQcGA//EADMQAAIBAgQDBQUJAQAAAAAAAAABAgMRBAUhMQYSQRMUYXGBJFGRobEiIzNTYnKC0dIV/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAEEAgUGA//EACsRAQACAQIEBQQCAwAAAAAAAAABAgMEEQUSITEiUWGB0ROh4fAjsRRxkf/aAAwDAQACEQMRAD8A9lArgQQgEJQEBAQAAgQAEJIBAAIBCUBAQAAoAAFK+wCEICAgkgQEBAQF0AAMwVkShpECAgEJAHAxWd5Zg6zo4nG0oVFvG92vO2xYx6XNkjmrWdlbJq8GOeW1o3culiaNegq9GrTnRavzxknG3meNqWrblmOr2rkravPWd4fopKUU4tNNXTXUxZxO5AgKwGEEK4GkEvm+OauIoZdha+FnKm6WJUnKPTR2+ZsuGVpfLat47w1fFbXpirak7bSxkvGGFxEI0sythq607S33cv8APrp4mWp4Zek74usff8sNNxTHeNsvSft+HZZ/mPd8hxOKwVWE5cqUJ05KVrtK68rlbS4OfUVpeFrV5+TT2vjn9l5dvq93udQ5Rz8loV8ZmFHCUYwqc0+bs60n2d0r3klvZIr6m1MeOb26f67rGmpbJkilevpPb3eq0ozjCKqT55Jayta78jlZmN+jr6xMR1bMUgkFwhkBAQl0nF8cW8nnLCJTUXetTcFJShbXTw0enuLugnH9aIv7T6qHEoyfQmae8ejzVHTOWSSWyAgPpOAsPKrnUq1vs0KMm34vRfK/wNbxW8Rg5fOW04TSbZ+byj+3odmc66RAFyQXXUAAgG+gQGrxau14oEvNM/ybMcFiKtavTdWi3fvFOCUWv1JLRnTaTVYclYrWdp8nK6vSZsVptaN48/nZ0xdUjGMpyUYRcpSdlFK7b9yEzERvJETPSHp/C2Uf8jLVCql3iq+eq10fSPp9bnL63U/Xy7x2js6vQab/AB8W0957u4uU11lskDAAACvqAoDjY+ljKlL2DFQoVF+ZT54v+j1xWxxP8kbx6Ts8c1csx/HbafWN3xmbZLxNjantT73FO8VCrFRX8Xb6G50+q0WOPB4fafy0Wo0muyT4/F7xt/zo4+G4PzarJKrClh49XOom/hG5634np69t5/fV504XqLT4oiPf4fVZFw7hMpkqt+3xNvxZK3L+1dPqanVa7Jn8Pavl8txpNBj0/i728/h3qZRX0wAkD2AyA2AAECAluBS3QQuoSebQCvcAbAtwCwEBAQAmBqIQXsEsyAwr3JYtrYhkUwJsA9QF+AAgACbAoy8AG4A2gAB9QJMBuAXAQIAAGBMBewGbaAJIiA9AIDIH/9k="
+                    width="20px" height="20px" alt=""></a>
+            <a href="https://www.pinterest.com/loseit/" aria-label="Pinterest page of Lose It!"> <i
+                    class="fab fa-pinterest"></i><img
+                    src="data:image/webp;base64,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"
+                    alt="" width="20px" height="20px"></a>
+            <a href="https://www.linkedin.com/company/lose-it-" aria-label="LinkedIn page of Lose It!"> <i
+                    class="fab fa-linkedin"><img src="https://in.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"
+                        alt="" width="20px" height="20px"></i></a>
+            <p>Copyright 2008-2021 FitNow, Inc, All Rights Reserved </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- <script>
+    let imagelink=[ "https://assets.loseit.com/website/story_submission/member_josh.png"
+     ,"https://assets.loseit.com/website/story_submission/member_emily.png",
+     "https://assets.loseit.com/website/HIW/advice-free_ashley.png" 
+     ,"https://assets.loseit.com/website/story_submission/member_josh.png",
+     "https://assets.loseit.com/website/story_submission/member_emily.png",
+     "https://assets.loseit.com/website/story_submission/member_justin.png"   ];
+
+
+let leftbtn=document.getElementById("left-btn");
+let rightbtn=document.getElementById("right-btn");
+let crasure=document.getElementById("crasuer")
+let imageset=0;
+
+rightbtn.addEventListener("click",function(){
+    imageset++;
+    rightbtn.setAttribute("src",imagelink[imageset])
+})
+
+leftbtn.addEventListener("click",function(){
+    imageset--;
+  leftbtn.setAttribute("src",imagelink[imageset])
+
+if(imageset==imagelink.length){
+    imageset=0;
+}
+else if(imageset<0){
+    imageset=imagelink.length-1;
+    // img.setAttribute("src",imagelink[imageset]);
+}
+
+document.getElementById("memory1").append(rightbtn,leftbtn)
+
+
+}) -->
+
+
+
+<!-- </script> -->
